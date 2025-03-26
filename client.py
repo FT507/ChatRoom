@@ -21,7 +21,7 @@ def client_receive():
 def client_send():
     while True:
         try:
-            message= '{}:{}'.format(NICKNAME,input(" "))
+            message= input()
             client.sendall(message.encode('ascii'))
             #print("send correctly")
         except:
