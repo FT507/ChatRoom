@@ -1,17 +1,18 @@
 import socket
 serv=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+serv.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
 import threading                                      #To make multiple clients connect simultaneously
 host=socket.gethostname()
-port=12345
+port=12344
 serv_add=(host,port)
 serv.bind(serv_add)
 serv.listen(10)
-members=[]
-usernames=[]
+Members=[]
+UserNames=[]
 
 ### We built this function to send messages to all clients in the chatroom ###
 def broadcast(sendmsg):
-    for mb in members:
+    for mb in Members:
         mb.send(sendmsg.encode())
 
 
@@ -24,27 +25,28 @@ def receive(member):
             broadcast(msg.decode())
         except:
             print("ERROR 404")
-            Index = members.index(member)
-            username = usernames[Index]
+            Index = Members.index(member)
+            username = UserNames[Index]
             member.recv(1024)
             broadcast(username + "IS REMOVED")
-            usernames.remove(username)
+            UserNames.remove(username)
         break
 
 
 ## Created to start threading between client and server
 def start():
-    member , addr  = serv.accept()
-    member.send("NICKNAMES".encode())
-    userNames = member.recv(1024).decode()
-    ## add more member without effecting on older ones
-    userNames.append(userNames)
-    members.append(members)
-    broadcast(userNames)
-    thread = threading.Thread(target=receive,args=(userNames,))  #The target is receive() function to get messages simultaneously
-    thread.start()
-    print("Server is waiting")
+    while True:
+        member , addr  = serv.accept()
+        member.send("NICKNAME".encode())
+        username = member.recv(1024).decode()
+        ## add more member without effecting on older oness
+        UserNames.append(username)
+        Members.append(member)
+        broadcast("   " + username + " joined the chatroom")
+        thread = threading.Thread(target=receive,args=(member,))  #The target is receive() function to get messages simultaneously
+        thread.start()
 
+print("Server is waiting")
 start()
 
  # def server():
