@@ -23,7 +23,7 @@ def client_send():
         try:
             message= '{}:{}'.format(NICKNAME,input(" "))
             client.sendall(message.encode('ascii'))
-            print("send correctly")
+            #print("send correctly")
         except:
             print("Error")
 

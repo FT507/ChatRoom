@@ -6,7 +6,7 @@ host=socket.gethostname()
 port=12344
 serv_add=(host,port)
 serv.bind(serv_add)
-serv.listen(10)
+serv.listen()
 Members=[]
 UserNames=[]
 
@@ -21,8 +21,9 @@ def receive(member):
     #Remeber we implement IN_LOOP as receiving not called for on time and broke it in case of fail in connection
     while True:
         try:
-            msg = member.recv(1024)
-            broadcast(msg.decode())
+            msg = member.recv(1024).decode()
+            print(msg)
+            broadcast(msg)
         except:
             print("ERROR 404")
             Index = Members.index(member)
