@@ -33,10 +33,10 @@ def receive(member):
             print("ERROR 404")
             Index = Members.index(member)
             username = UserNames[Index]
-            broadcast(username + " IS REMOVED")
             UserNames.remove(username)
             Members.remove(member)
             member.close()
+            broadcast(username + " IS REMOVED")
             break
 
 

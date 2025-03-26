@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="796edaaa-a1df-4b4c-8965-be88d5c2d559" name="Changes" comment="add new function (broadcast_message)">
+    <list default="true" id="796edaaa-a1df-4b4c-8965-be88d5c2d559" name="Changes" comment="try to fix the bug in receive when enter to except that remove the member but the server stop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server.py" afterDir="false" />
     </list>
@@ -60,7 +60,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.client2">
+  <component name="RunManager" selected="Python.Server">
     <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chat_room" />
       <option name="ENV_FILES" value="" />
@@ -157,7 +157,7 @@
       <workItem from="1742978253615" duration="2190000" />
       <workItem from="1743000744179" duration="7541000" />
       <workItem from="1743015088693" duration="317000" />
-      <workItem from="1743019562638" duration="2217000" />
+      <workItem from="1743019562638" duration="3294000" />
     </task>
     <task id="LOCAL-00001" summary="I fixed some bugs in file server.py and add another client">
       <option name="closed" value="true" />
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743020006815</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="try to fix the bug in receive when enter to except that remove the member but the server stop">
+      <option name="closed" value="true" />
+      <created>1743023061191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743023061191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,11 +200,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I fixed some bugs in file server.py and add another client" />
     <MESSAGE value="add new function (broadcast_message)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new function (broadcast_message)" />
+    <MESSAGE value="try to fix the bug in receive when enter to except that remove the member but the server stop" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to fix the bug in receive when enter to except that remove the member but the server stop" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ChatRoom$client2.coverage" NAME="client2 Coverage Results" MODIFIED="1743021590743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ChatRoom$Server.coverage" NAME="Server Coverage Results" MODIFIED="1743021475911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ChatRoom$client.coverage" NAME="client Coverage Results" MODIFIED="1743021484825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChatRoom$client2.coverage" NAME="client2 Coverage Results" MODIFIED="1743024408074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChatRoom$Server.coverage" NAME="Server Coverage Results" MODIFIED="1743024309044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChatRoom$client.coverage" NAME="client Coverage Results" MODIFIED="1743024315154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
